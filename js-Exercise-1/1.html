@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>
+            Question :- 1
+        </title>
+    </head>
+    <body>
+        <script>
+            let iteration=prompt("Enter the Number Of Rows");
+            iteration=parseInt(iteration);
+            for (let i=0;i<=iteration;i++){
+                for (let j=0;j<=iteration;j++){
+                    if (i==j || i+j==iteration){
+                        document.write("*");
+                    }else{
+                        document.write("&nbsp");
+                    }
+                }
+                document.write("<br>")
+            }
+        </script>
+    </body>
+</html>

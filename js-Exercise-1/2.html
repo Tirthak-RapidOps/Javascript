@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>
+            "Question-2"
+        </title>
+    </head> 
+    <body>
+        <script>
+            let iteration=prompt("Enter the number of row");
+            iteration=parseInt(iteration);
+            for (let i=0;i<iteration;i++){
+                for (let j=0;j<iteration;j++){
+                    if (i==0 || i==iteration-1){
+                        document.write(" *")
+                    }
+                    else{
+                        if (j==0 || j==iteration-1){
+                            document.write(" *")
+                        }else{
+                            document.write("&nbsp&nbsp ")
+                        }
+                    }
+                }
+                document.write("<br>")
+            }
+        </script>
+    </body>
+</html>

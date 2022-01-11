@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>
+            Question-5
+        </title>
+        <body>
+            <script>
+                var k=1;
+                var space =0;
+                for (let i=1;i<=5;i++){
+                    for (let l = 0; l < space; l++) {
+                        document.write("&nbsp&nbsp ");
+                    }
+                    for (let j=k;j<=5;j++){
+                        document.write(" "+ j +" ");
+                    }
+                document.write("<br>");
+                k++;
+                space++;
+                }
+                var k=4;
+                var space=4;
+                for (let i=1;i<5;i++){
+                    for (let l=1;l<space;l++){
+                        document.write("&nbsp&nbsp ");
+                    }
+                    for (let j=k;j<=5;j++){
+                        document.write(" "+j+" ");
+                    }
+                    k--;
+                    document.write("<br>");
+                    space--;
+                }
+            </script>
+        </body>
+    </head>
+</html>
