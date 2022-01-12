@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>
+            Exercie :- 2 Question :- 1
+        </title>
+    </head>
+    <body>
+        <script>
+            let n=prompt("Enter number of element you want to put inside the array :- ");
+            let string="";
+            let str1="",str2="";
+            n=parseInt(n);
+            let arr=new Array(n)
+            let arr1=[]
+            let arr2=[]
+            for (let i=0;i<arr.length;i++){
+                arr[i]=prompt ("Enter the "+ i + " value of array :- ")
+            }
+            for (let i=0;i<arr.length;i++){
+                string += arr[i] + " ";
+            }
+            document.write("Inputed Array is :- "+string);
+            let count=prompt("Enter the number of value you want to fatch from starting and ending :- ")
+            for (let i=0;i<count;i++){
+                arr1.push(arr[i]);
+                str1 += arr[i] + " "; 
+            }
+            for (let i=arr.length-1;i>(arr.length-1-count);i--){
+                arr2.push(arr[i]);
+                str2 += arr[i] + " ";
+            }
+            console.log(arr1);
+            console.log(arr2);
+            document.write("<br>The First "+count+" elements of Array "+str1);
+            document.write("<br>The Last "+count+" elements of Array "+str2);
+        </script>
+    </body>
+</html>

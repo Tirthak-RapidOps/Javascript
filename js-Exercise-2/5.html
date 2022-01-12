@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>
+            Exercise :- 2 Question :- 5
+        </title>
+    </head>
+    <body>
+        <script>
+            function union(arr1,arr2){
+                let arr3=arr1.concat(arr2);
+                let unique=arr3.filter((item,i,arr)=>arr.indexOf(item)===i)
+                return unique;
+            }
+            function intersection(arr1,arr2){
+                let arr3=[]
+                for (let i=0;i<arr1.length;i++){
+                    for (let j=0;j<arr2.length;j++){
+                        if (arr1[i]===arr2[j]){
+                            arr3.push(arr1[i]);
+                            break;
+                        }
+                    }
+                }
+                return arr3;
+            }
+            function diffrence(arr1,arr2){
+                let arr4=intersection(arr1,arr2);
+                let arr5=arr1;
+                let arr6=arr2;
+                for (let i=0;i<arr1.length;i++){
+                    for (let j=0;j<arr4.length;j++){
+                        if (arr1[i]===arr4[j]){
+                            arr5.splice(i,1);
+                        }
+                    }
+                }
+                for (let i=0;i<arr2.length;i++){
+                    for (let j=0;j<arr4.length;j++){
+                        if (arr2[i]===arr4[j]){
+                            arr6.splice(i,1);
+                        }
+                    }
+                }
+                document.write("<br>A-B :- "+arr5);
+                document.write("<br>B-A :- "+arr6);
+            }
+            let n=prompt("Enter the size for both array :-");
+            let arr1=[],arr2=[];
+            for (let i=0;i<n;i++){
+                arr1[i]=prompt("Enter the element of array1 at index " + i);
+            }
+            for (let i=0;i<n;i++){
+                arr2[i]=prompt("Enter the element of array2 at index " + i);
+            }
+            document.write("Inputed Values In Array 1 is :- "+arr1);
+            document.write("<br>Inputed Values In Array 2 is :- "+arr2);
+            document.write("<br>Union Array :- "+union(arr1,arr2));
+            document.write("<br>Intersection Array :- "+intersection(arr1,arr2));
+            diffrence(arr1,arr2)
+        </script>
+    </body>
+</html>

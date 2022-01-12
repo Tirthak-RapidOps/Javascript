@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>
+            Exercise :- 2 Question :- 2
+        </title>
+    </head>
+    <body>
+        <script>
+            let str=prompt("Enter the number");
+            let str1="";
+            for (let i=0;i<str.length;i++){
+                if(str[i]%2==0&&str[i+1]%2==0){
+                    str1+=str[i]+"-";
+                }else{
+                    str1+=str[i];
+                }
+            }
+            document.write("Input :- "+str);
+            document.write("<br>Output :- "+str1);
+        </script>
+    </body>
+</html>

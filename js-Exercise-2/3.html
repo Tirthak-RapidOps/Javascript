@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>
+            Exercise :- 2 Question 3
+        </title>
+    </head>
+    <body>
+        <script>
+            let n=prompt("Number of element you want to add inside the array");
+            let item=[];
+            let str="";
+            for (let i=0;i<n;i++){
+                item[i]=prompt("Enter the Value At"+ i +" index" );
+                str+=item[i]+" ";
+            }
+            let max=item.reduce((prev,curr,i,arr)=>{
+                if (arr.filter(item=>item===prev).length>arr.filter(item=>item===curr).length){
+                    return prev;
+                }else{
+                    return curr;
+                }
+            });
+            document.write("Inputed Values Are :- "+str);
+            document.write("<br>Maximum Occurance :- "+ max);
+        </script>
+    </body>
+</html>

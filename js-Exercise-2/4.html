@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>
+            Exercise :- 2 Question :-4
+        </title>
+    </head>
+    <body>
+        <script>
+            let n=prompt("Enter the number of Element You Want to enter into array :- ")
+            let arr=[];
+            for (let i=0;i<n;i++){
+                arr[i]=prompt ("Enter the element into the array :- ");
+            }
+            document.write("Inputed Values Are :-"+arr);   
+            for (let j=arr.length;j>0;j--){
+                var k=Math.floor((Math.random())*(j+1));
+                [arr[j], arr[k]] = [arr[k], arr[j]];
+            }
+            document.write("<br>Final Suffled Values Are :- "+arr);
+        </script>
+    </body>
+</html>
