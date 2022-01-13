@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>
+            Exercise :- 2 Question :- 14
+        </title>
+    </head>
+    <body>
+        <script>
+            function asendingAge(arr){
+                let txt="";
+                for (let i=0;i<arr.length;i++){
+                    for (let j=0;j<arr.length;j++){
+                        if (arr[i]['age']<arr[j]['age']){
+                            tmp=arr[i];
+                            arr[i]=arr[j];
+                            arr[j]=tmp;
+                        }
+                    }
+                }
+                for (i=0;i<arr.length;i++){
+                    txt+=arr[i]['id']+"-"+arr[i]['name']+'-'+arr[i]['age']+"<br>";
+                }
+                document.write("Data Which Is Sorted By Age :- <br>");
+                document.write(txt)
+            }
+            function decendingName(arr){
+                let txt="";
+                for (let i=0;i<arr.length;i++){
+                    for (let j=0;j<arr.length;j++){
+                        if (arr[i]['name']>arr[j]['name']){
+                            tmp=arr[i];
+                            arr[i]=arr[j];
+                            arr[j]=tmp;
+                        }
+                    }
+                }
+                for (i=0;i<arr.length;i++){
+                    txt+=arr[i]['id']+"-"+arr[i]['name']+'-'+arr[i]['age']+"<br>";
+                }
+                document.write("<br><br>Data Which Is Sorted By Name :- <br>");
+                document.write(txt)
+            }
+            let c=[{'id':101,'name':"Tirthak",'age':22},
+                   {'id':102,'name':"Abhay",'age':20},
+                   {'id':103,'name':"Neel",'age':19},
+                   {'id':104,'name':"Vandit",'age':24},
+                   {'id':105,'name':"Darshan",'age':26},
+                   {'id':106,'name':"Kashyap",'age':23},
+                   {'id':107,'name':"Aagam",'age':27},
+                   {'id':108,'name':"Henal",'age':21},
+                   {'id':109,'name':"Shivika",'age':25},
+                   {'id':110,'name':"ravindra",'age':24},];
+                   asendingAge(c);
+                   decendingName(c);
+        </script>
+    </body>
+</html>
