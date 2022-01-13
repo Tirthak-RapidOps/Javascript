@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>
+            Exercise :- 2 Question :- 13
+        </title>
+    </head>
+    <body>
+        <script>
+            function thousandconverter(num){
+                let n=num.length;
+                let txt=num.split("").reverse().join("");
+
+                i=3;
+                while (i<n){
+                    txt=txt.slice(0,i)+","+txt.slice(i);
+                    i=i+4;
+                    n=txt.length;
+                }
+                txt=txt.split("").reverse().join("");
+                document.write("Inputed Value :- "+num);
+                document.write("<br>The Answer is :- "+txt);
+            }
+            let num=prompt("Enter the value to convert it into thousand sepration :- ");
+            thousandconverter(num);
+        </script>
+    </body>
+</html>

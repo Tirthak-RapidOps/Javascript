@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>
+            Exercise :- 2 Question :- 12
+        </title>
+    </head>
+    <body>
+        <script>
+            function chop(str,length){
+                let arr=[];
+                let count=0;
+                let str1="";
+                for (let i=0;i<str.length;i++){
+                    str1+=str[i];
+                    count++;
+                    if(count==length){
+                        arr.push(str1);
+                        str1="";
+                        count=0;
+                    }
+                    if (str1.length<length && i==str.length-1){
+                        arr.push(str1);
+                    }
+                }
+                document.write("<br>Inputed String is :- "+str);
+                document.write("<br>Inputed length for chop is :- "+length);
+                document.write("<br>The Answer is :- "+"["+arr+"]");
+            }
+            let str=prompt("Enter the string :- ");
+            let length=prompt("Enter the length after howmuch character you want to chop :- ");
+            chop(str,length);
+        </script>
+    </body>
+</html>
