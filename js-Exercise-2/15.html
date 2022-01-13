@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>
+            Exercise :- 2 Question :- 15
+        </title>
+    </head>
+    <body>
+        <script>
+            function insertElementToArray(arr){
+                let txt="";
+                let item={
+                    'name':prompt("Enter the name"),
+                    'age':prompt("Enter the Age")
+                }
+                let arr1=arr;
+                let position=prompt("Enter the position");
+                arr1.splice(position,0,item);
+                for (let i=0;i<arr1.length;i++){
+                    document.write(arr[i]['name']+'-'+arr1[i]['age']+"<br>");
+                }
+            }
+            function deleteElementFromArray(arr){
+                let txt=prompt("Enter the position from Where you Want to delete Data :- ");
+                let arr1=arr;
+                for (let i=0;i<arr1.length;i++){
+                    if (txt==i){
+                        arr1.splice(txt,1);
+                    }
+                }
+                for (let i=0;i<arr.length;i++){
+                    document.write(arr[i]['name']+'-'+arr[i]['age']+"<br>");
+                }
+            }
+            let arr=[{'name':"Tirthak",'age':22},
+                   {'name':"Abhay",'age':20},
+                   {'name':"Neel",'age':19},
+                   {'name':"Vandit",'age':24},
+                   {'name':"Darshan",'age':26},
+                   {'name':"Kashyap",'age':23},
+                   {'name':"Aagam",'age':27},
+                   {'name':"Henal",'age':21},
+                   {'name':"Shivika",'age':25},
+                   {'name':"ravindra",'age':24},];
+                   let choice=prompt("Enter 1 For Insert Enter 2 For Delete");
+                   switch(choice){
+                        case "1":
+                            insertElementToArray(arr);
+                            break;
+                        case "2":
+                            deleteElementFromArray(arr)
+                            break;
+                        default:
+                            document.write("Invalid Choice");
+                   }
+        </script>
+    </body>
+</html>
