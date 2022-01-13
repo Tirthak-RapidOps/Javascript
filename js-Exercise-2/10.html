@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>
+            Exercise :- 2 Question :- 10
+        </title>
+    </head>
+    <body>
+        <script>
+            function getDiffrenceOfDate(date,date1){
+                if (date>date1){
+                    tmp=date;
+                    date=date1;
+                    date1=tmp;
+                }
+                let day=1000*60*60*24;
+                let hours=1000*60*60;
+                let minutes=1000*60;
+                var diff=date1.getTime()-date.getTime();
+                let diffdays=Math.floor(diff/day);
+                let year=Math.floor(diffdays/365);
+                diffdays=diffdays-(year*365);
+                let month=Math.floor(diffdays/30);
+                diffdays=diffdays-(month*30);
+                let days=diffdays;
+                document.write(year + "Year" + month + "Month" + days + "Days");
+                diff=date1.getTime()-date.getTime();
+                diffdays=Math.floor(diff/day);
+                month=Math.floor(diffdays/30);
+                diffdays=diffdays-(month*30);
+                days=diffdays;
+                document.write("<br> or "+month + "Month" + days + "Days");
+                diff=date1.getTime()-date.getTime();
+                diffdays=Math.floor(diff/day);
+                let week=Math.floor(diffdays/7);
+                diffdays=diffdays-(month*7);
+                days=diffdays;
+                document.write("<br> or "+week + "Week" + days + "Days");
+                diff=date1.getTime()-date.getTime();
+                diffdays=Math.floor(diff/day);
+                document.write("<br> or " + diffdays + "Days");
+                diff=date1.getTime()-date.getTime();
+                let diffHours=Math.floor(diff/hours);
+                document.write("<br> or " + diffHours + "Hours");
+                diff=date1.getTime()-date.getTime();
+                let diffMinutes=Math.floor(diff/minutes);
+                document.write("<br> or " + diffMinutes + "Minutes");
+
+            }
+            let date=prompt("Enter The Date (MM/DD/YYYY):- ");
+            date=new Date(date);
+            let date1=prompt("Enter The Second Date :- (MM/DD/YYYY) :- ");
+            date1=new Date(date1);
+            getDiffrenceOfDate(date,date1);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>
+            Exercise :- 2 Question :- 7
+        </title>
+    </head>
+    <body>
+        <script>
+            function getMonthName(date){
+                let month=date.getMonth();
+                return month;
+            }
+            let arr=["January","February","March","April","May","June","July","August","September","October","November","December"];
+            let date=prompt("Enter The Date (MM/DD/YYYY):- ");
+            date=new Date(date);
+            let month=getMonthName(date);
+            let monthname=arr[month];
+            document.write("The Month Name Is :- " + monthname);
+        </script>
+    </body>
+</html>
